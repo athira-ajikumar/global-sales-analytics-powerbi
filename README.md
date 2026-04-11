@@ -1,14 +1,63 @@
-# Global Sales Analytics | Power BI
+# Global Sales Analytics Dashboard | Power BI
 
-## Overview
+An interactive **Power BI sales analytics project** built from the **Global Superstore** dataset to analyze revenue, profit, order trends, shipping performance, product contribution, and customer behavior across global markets.
 
-This project presents a multi-page **Power BI sales analytics report** built from the **Global Superstore** dataset. The dashboard is designed to help users analyze sales performance, profitability, customer behavior, product contribution, shipping efficiency, and regional trends across a global business footprint.
+[View Full Dashboard PDF](./GlobalSales.pdf) | [Open Power BI File](./GlobalSales.pbix) | [View Source Dataset](./Global_Superstore.xlsx)
 
-The report combines high-level executive KPIs with detailed views for year-over-year performance, customer and product intelligence, and customer-level drill-through analysis. It is intended for portfolio presentation, business insight generation, and interactive reporting practice in Power BI.
+## Dashboard Preview
 
-## Dashboard Summary
+![Executive Sales Overview](./assets/executive-sales-overview.png)
 
-The report highlights the following headline metrics:
+<p align="center">
+  <img src="./assets/sales-performance-all-years.png" alt="Sales Performance - All Years" width="49%">
+  <img src="./assets/customer-product-intelligence.png" alt="Customer and Product Intelligence" width="49%">
+</p>
+
+<p align="center">
+  <img src="./assets/customer-drillthrough-alan-dominguez.png" alt="Customer Drill-through View" width="72%">
+</p>
+
+## Project Snapshot
+
+- Built a **4-page Power BI dashboard** for executive reporting and drill-through analysis
+- Analyzed **51,290 transactions**, **25,035 orders**, and **1,590 customers**
+- Covered sales activity across **147 countries** from **2011 to 2014**
+- Focused on sales growth, profitability, market performance, shipping efficiency, and customer insights
+
+## What This Dashboard Shows
+
+### 1. Executive Sales Overview
+
+- KPI cards for total sales, total profit, total orders, profit margin, and year-over-year sales growth
+- Monthly sales trend across the year
+- Sales distribution by category
+- Regional sales comparison
+- Top customers by sales
+- Top-selling products with ranking and profit margin
+
+### 2. Sales Performance - All Years
+
+- Total sales by market
+- Monthly sales compared with ship-date sales
+- Year-over-year sales performance by year
+- Shipping mode performance, including net profit after shipping and shipping cost share
+
+### 3. Customer & Product Intelligence
+
+- Cumulative sales growth over time
+- Top customers by total sales
+- Order-level profit details
+- Category contribution to overall sales
+
+### 4. Customer Drill-Through View
+
+- Detailed customer analysis for **Alan Dominguez**
+- Customer sales, profit, margin, order count, and average discount
+- Monthly sales and profit trends
+- Order-level detail and top purchased products
+- Customer sales distribution by category
+
+## Headline Metrics
 
 | Metric | Value |
 | --- | ---: |
@@ -18,120 +67,56 @@ The report highlights the following headline metrics:
 | Total Profit Margin | 11.60% |
 | Sales YoY | 47.3% |
 
-## Dashboard Pages
+## Key Insights
 
-### 1. Executive Sales Overview
+- **Technology** is the top-performing category with approximately **4.74M** in sales.
+- **APAC** is the leading market, followed by **EU**, **US**, and **LATAM**.
+- Sales performance strengthens toward the end of the year, with **November** and **December** emerging as the strongest months.
+- **Standard Class** is the most favorable shipping mode for profitability, while faster shipping options reduce net profit after shipping.
+- The dashboard supports both executive-level review and customer-level investigation through filters and drill-through navigation.
 
-This landing page provides a concise business summary with:
+## Dataset Overview
 
-- KPI cards for sales, profit, profit margin, order volume, and year-over-year growth
-- Monthly sales trend analysis
-- Category-wise sales comparison
-- Regional sales comparison
-- Top customers by sales
-- Top-selling products with rank and profit margin
-- Interactive slicers for **Year**, **Category**, and **Region**
+The report is based on [`Global_Superstore.xlsx`](./Global_Superstore.xlsx), a transactional retail dataset containing:
 
-### 2. Sales Performance - All Years
+- **51,290 records**
+- **24 fields**
+- **25,035 unique orders**
+- **1,590 unique customers**
+- **147 countries**
+- Order dates from **2011-01-01** to **2014-12-31**
 
-This page focuses on long-term performance tracking and operational analysis:
+### Core Fields
 
-- Total sales by market
-- Monthly sales compared with sales by ship date
-- Year-over-year sales performance by year
-- Shipping mode performance, including net profit after shipping and shipping cost ratios
-- Year filter for focused annual analysis
-
-### 3. Customer & Product Intelligence
-
-This section is designed to uncover deeper commercial patterns:
-
-- Cumulative sales growth over time
-- Top customers by total sales
-- Order-level profit details
-- Category contribution to overall sales
-- Category filter for targeted product analysis
-
-### 4. Customer Drill-Through View
-
-The report includes a detailed customer analysis page demonstrated through **Alan Dominguez**, featuring:
-
-- Customer total sales, profit, profit margin, and order count
-- Average customer discount
-- Monthly sales and profit trends
-- Customer order details
-- Sales distribution by category
-- Top products purchased by the selected customer
-
-This drill-through design makes it easier to move from executive reporting to account-level analysis.
-
-## Key Business Insights
-
-- **Technology** is the highest-performing category, contributing approximately **4.74M** in sales.
-- **APAC** is the top market by sales, followed by **EU**, **US**, and **LATAM**.
-- Sales peak toward the end of the year, with **November** and **December** showing the strongest monthly performance.
-- Among the shipping modes shown in the report, **Standard Class** delivers the strongest net profit after shipping, while faster shipping methods reduce profitability.
-- The dashboard supports both broad strategic review and targeted customer investigation through interactive filtering and drill-through analysis.
-
-## Dataset Information
-
-The report is based on the [`Global_Superstore.xlsx`](./Global_Superstore.xlsx) dataset.
-
-### Dataset profile
-
-- Source file contains **51,290 transaction records**
-- Covers **25,035 distinct orders**
-- Includes **1,590 customers**
-- Spans **147 countries**
-- Covers order activity from **2011-01-01** to **2014-12-31**
-- Organized in a single worksheet with **24 fields**
-
-### Core data fields
-
-The dataset includes dimensions and measures related to:
-
-- Order details: `Order ID`, `Order Date`, `Ship Date`, `Ship Mode`, `Order Priority`
-- Customer details: `Customer ID`, `Customer Name`, `Segment`
+- Order information: `Order ID`, `Order Date`, `Ship Date`, `Ship Mode`, `Order Priority`
+- Customer information: `Customer ID`, `Customer Name`, `Segment`
 - Geography: `City`, `State`, `Country`, `Postal Code`, `Market`, `Region`
-- Product details: `Product ID`, `Category`, `Sub-Category`, `Product Name`
+- Product information: `Product ID`, `Category`, `Sub-Category`, `Product Name`
 - Measures: `Sales`, `Quantity`, `Discount`, `Profit`, `Shipping Cost`
 
-## Repository Contents
-
-This project repository is intended to include the following core assets:
-
-- [`Global_Superstore.xlsx`](./Global_Superstore.xlsx) - source dataset used to build the report
-- [`GlobalSales.pdf`](./GlobalSales.pdf) - exported PDF version of the dashboard
-- Power BI `.pbix` file - editable source report for further development and exploration
-
-## Tools and Techniques Used
+## Tools Used
 
 - **Power BI Desktop**
 - **Data modeling**
-- **DAX measures**
-- **Interactive slicers and filters**
+- **Power BI measures and calculated metrics**
+- **Interactive slicers**
 - **Drill-through navigation**
-- **KPI cards**
-- **Line, bar, donut, and matrix visuals**
+- **KPI, line, bar, donut, and table visuals**
 
-## Business Questions Addressed
+## Repository Files
 
-This dashboard helps answer questions such as:
+- [`GlobalSales.pdf`](./GlobalSales.pdf) - exported dashboard report
+- [`Global_Superstore.xlsx`](./Global_Superstore.xlsx) - source dataset
+- [`GlobalSales.pbix`](./GlobalSales.pbix) - editable Power BI report file
+- [`assets/`](./assets) - dashboard preview images used in this README
 
-- How are sales and profit trending across months and years?
-- Which categories, products, customers, and markets contribute the most revenue?
-- How does shipping mode affect profitability?
-- Which customers require deeper account-level analysis?
-- How is total sales distributed across categories and regions?
+## How to Explore
 
-## How to Use
+1. Open the PDF for a quick visual walkthrough of the report.
+2. Open [`GlobalSales.pbix`](./GlobalSales.pbix) in **Power BI Desktop** for interactive exploration.
+3. Refresh or reconnect the data source to [`Global_Superstore.xlsx`](./Global_Superstore.xlsx) if needed.
+4. Use filters to analyze performance by year, category, region, and customer.
 
-1. Clone or download the repository.
-2. Open the Power BI `.pbix` file in **Power BI Desktop**.
-3. Verify the data source path for [`Global_Superstore.xlsx`](./Global_Superstore.xlsx) if required.
-4. Use the slicers to filter by year, category, and region.
-5. Navigate across the report pages to analyze executive metrics, yearly performance, product trends, and customer-level details.
+## Why This Project Matters
 
-## Outcome
-
-This project demonstrates the use of Power BI to turn a large transactional dataset into a structured analytical experience. It showcases dashboard design, metric storytelling, interactive exploration, and practical business insight generation using a globally distributed sales dataset.
+This project demonstrates the ability to turn raw transactional sales data into a polished business intelligence solution. It highlights dashboard design, KPI storytelling, analytical thinking, and the use of Power BI to support decision-making at both summary and detail levels.
